@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran1-сотрудники-e",
+  "editForm": "i-i-s-restoran1-сотрудники-e",
+  "external": false,
+  "caption": "Сотрудники",
+  "name": "IISRestoran1СотрудникиL",
+  "className": "СотрудникиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-сотрудники",
+      "modelProjection": "СотрудникиL"
+    }
+  ]
+}

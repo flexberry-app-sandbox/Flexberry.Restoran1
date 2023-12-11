@@ -1,0 +1,96 @@
+﻿{
+  "name": "IISRestoran1Стол",
+  "modelName": "i-i-s-restoran1-стол",
+  "className": "Стол",
+  "nameSpace": "IIS.Restoran1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "колвоМест",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерСтола",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статус",
+      "type": "i-i-s-restoran1-статусы",
+      "flexberryType": "Статусы",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СтолE",
+      "modelName": "i-i-s-restoran1-стол",
+      "attrs": [
+        {
+          "name": "номерСтола",
+          "caption": "Номер стола",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "колвоМест",
+          "caption": "Колво мест",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СтолL",
+      "modelName": "i-i-s-restoran1-стол",
+      "attrs": [
+        {
+          "name": "номерСтола",
+          "caption": "Номер стола",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "колвоМест",
+          "caption": "Колво мест",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

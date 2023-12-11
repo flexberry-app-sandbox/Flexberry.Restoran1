@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran1-стол-e",
+  "editForm": "i-i-s-restoran1-стол-e",
+  "external": false,
+  "caption": "Стол",
+  "name": "IISRestoran1СтолL",
+  "className": "СтолL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-стол",
+      "modelProjection": "СтолL"
+    }
+  ]
+}

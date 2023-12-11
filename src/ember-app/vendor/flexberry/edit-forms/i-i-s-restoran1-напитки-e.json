@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "продукты",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "СоставНапитков.Продукты",
+      "projection": "ПродуктыL",
+      "detailModelName": "i-i-s-restoran1-состав-напитков"
+    }
+  ],
+  "external": false,
+  "caption": "Напитки",
+  "name": "IISRestoran1НапиткиE",
+  "className": "НапиткиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-напитки",
+      "modelProjection": "НапиткиE"
+    }
+  ]
+}

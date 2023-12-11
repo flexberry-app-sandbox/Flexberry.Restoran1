@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran1-блюда-e",
+  "editForm": "i-i-s-restoran1-блюда-e",
+  "external": false,
+  "caption": "Блюда",
+  "name": "IISRestoran1БлюдаL",
+  "className": "БлюдаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-блюда",
+      "modelProjection": "БлюдаL"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+﻿{
+  "name": "IISRestoran1Блюда",
+  "modelName": "i-i-s-restoran1-блюда",
+  "className": "Блюда",
+  "nameSpace": "IIS.Restoran1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодБлюда",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "стоимотсь",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "составБлюда",
+      "relatedTo": "i-i-s-restoran1-состав-блюда",
+      "inverse": "блюда"
+    }
+  ],
+  "projections": [
+    {
+      "name": "БлюдаE",
+      "modelName": "i-i-s-restoran1-блюда",
+      "attrs": [
+        {
+          "name": "кодБлюда",
+          "caption": "Код блюда",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "стоимотсь",
+          "caption": "Стоимотсь",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "СоставБлюдаE",
+          "caption": "Состав блюда",
+          "name": "составБлюда",
+          "relatedTo": "i-i-s-restoran1-состав-блюда",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "БлюдаL",
+      "modelName": "i-i-s-restoran1-блюда",
+      "attrs": [
+        {
+          "name": "кодБлюда",
+          "caption": "Код блюда",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "стоимотсь",
+          "caption": "Стоимотсь",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

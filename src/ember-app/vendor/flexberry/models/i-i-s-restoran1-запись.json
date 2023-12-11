@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISRestoran1Запись",
+  "modelName": "i-i-s-restoran1-запись",
+  "className": "Запись",
+  "nameSpace": "IIS.Restoran1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "время",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаЗаписи",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "гости",
+      "relatedTo": "i-i-s-restoran1-гости",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "бронь",
+      "relatedTo": "i-i-s-restoran1-бронь",
+      "inverse": "запись"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЗаписьE",
+      "modelName": "i-i-s-restoran1-запись",
+      "attrs": [
+        {
+          "name": "датаЗаписи",
+          "caption": "Дата записи",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "время",
+          "caption": "Время",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Гости",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Гости",
+          "name": "гости",
+          "relatedTo": "i-i-s-restoran1-гости",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

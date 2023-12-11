@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran1-должность-e",
+  "editForm": "i-i-s-restoran1-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISRestoran1ДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

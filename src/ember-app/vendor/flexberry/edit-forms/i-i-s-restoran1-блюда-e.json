@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "продукты",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "СоставБлюда.Продукты",
+      "projection": "ПродуктыL",
+      "detailModelName": "i-i-s-restoran1-состав-блюда"
+    }
+  ],
+  "external": false,
+  "caption": "Блюда",
+  "name": "IISRestoran1БлюдаE",
+  "className": "БлюдаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-блюда",
+      "modelProjection": "БлюдаE"
+    }
+  ]
+}

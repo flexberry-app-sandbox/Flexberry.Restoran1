@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Стол",
+  "name": "IISRestoran1СтолE",
+  "className": "СтолE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-стол",
+      "modelProjection": "СтолE"
+    }
+  ]
+}

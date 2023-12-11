@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran1-продукты-e",
+  "editForm": "i-i-s-restoran1-продукты-e",
+  "external": false,
+  "caption": "Продукты",
+  "name": "IISRestoran1ПродуктыL",
+  "className": "ПродуктыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-продукты",
+      "modelProjection": "ПродуктыL"
+    }
+  ]
+}

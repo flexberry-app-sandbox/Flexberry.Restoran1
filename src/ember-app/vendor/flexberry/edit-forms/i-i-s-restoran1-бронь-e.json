@@ -1,0 +1,63 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Стол",
+      "projection": "СтолL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Ресторан",
+      "projection": "РесторанL",
+      "detailModelName": null
+    },
+    {
+      "master": "гости",
+      "displayAttributeName": "фИО",
+      "required": true,
+      "relationName": "Запись.Гости",
+      "projection": "ГостиL",
+      "detailModelName": "i-i-s-restoran1-запись"
+    },
+    {
+      "master": "блюда",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "ЗаказБлюда.Блюда",
+      "projection": "БлюдаL",
+      "detailModelName": "i-i-s-restoran1-заказ-блюда"
+    },
+    {
+      "master": "напитки",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "ЗаказНапитков.Напитки",
+      "projection": "НапиткиL",
+      "detailModelName": "i-i-s-restoran1-заказ-напитков"
+    }
+  ],
+  "external": false,
+  "caption": "Бронь",
+  "name": "IISRestoran1БроньE",
+  "className": "БроньE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-бронь",
+      "modelProjection": "БроньE"
+    }
+  ]
+}

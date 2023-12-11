@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Ресторан",
+  "name": "IISRestoran1РесторанE",
+  "className": "РесторанE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-ресторан",
+      "modelProjection": "РесторанE"
+    }
+  ]
+}

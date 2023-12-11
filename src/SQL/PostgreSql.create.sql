@@ -1,0 +1,273 @@
+﻿
+
+
+
+
+CREATE TABLE СоставНапитков (
+ primaryKey UUID NOT NULL,
+ Количество INT NULL,
+ Единицы VARCHAR(2) NULL,
+ Продукты UUID NOT NULL,
+ Напитки UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Продукты (
+ primaryKey UUID NOT NULL,
+ КодПродукта INT NULL,
+ Наименование VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Запись (
+ primaryKey UUID NOT NULL,
+ ДатаЗаписи TIMESTAMP(3) NULL,
+ Время VARCHAR(255) NULL,
+ Гости UUID NOT NULL,
+ Бронь UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Гости (
+ primaryKey UUID NOT NULL,
+ КодГостя INT NULL,
+ ФИО VARCHAR(255) NULL,
+ Телефон INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Бронь (
+ primaryKey UUID NOT NULL,
+ КодБрони INT NULL,
+ ТипОплаты VARCHAR(18) NULL,
+ Стол UUID NOT NULL,
+ Сотрудники UUID NOT NULL,
+ Ресторан UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Должность (
+ primaryKey UUID NOT NULL,
+ КодДолжности INT NULL,
+ Наименование VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ЗаказНапитков (
+ primaryKey UUID NOT NULL,
+ Комментраий VARCHAR(255) NULL,
+ Напитки UUID NOT NULL,
+ Бронь UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Сотрудники (
+ primaryKey UUID NOT NULL,
+ КодСотрудника INT NULL,
+ ФИО VARCHAR(255) NULL,
+ ДатаРождения TIMESTAMP(3) NULL,
+ Должность UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ЗаказБлюда (
+ primaryKey UUID NOT NULL,
+ Комментарий VARCHAR(255) NULL,
+ Блюда UUID NOT NULL,
+ Бронь UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Стол (
+ primaryKey UUID NOT NULL,
+ НомерСтола INT NULL,
+ КолвоМест INT NULL,
+ Статус VARCHAR(12) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Блюда (
+ primaryKey UUID NOT NULL,
+ КодБлюда INT NULL,
+ Наименование VARCHAR(255) NULL,
+ Стоимотсь DOUBLE PRECISION NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE СоставБлюда (
+ primaryKey UUID NOT NULL,
+ Количество INT NULL,
+ Единицы VARCHAR(2) NULL,
+ Продукты UUID NOT NULL,
+ Блюда UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Ресторан (
+ primaryKey UUID NOT NULL,
+ КодРест INT NULL,
+ Наименование VARCHAR(255) NULL,
+ Адрес VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Напитки (
+ primaryKey UUID NOT NULL,
+ КодНапитка INT NULL,
+ Наименование VARCHAR(255) NULL,
+ Стоимость DOUBLE PRECISION NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMNETLOCKDATA (
+ LockKey VARCHAR(300) NOT NULL,
+ UserName VARCHAR(300) NOT NULL,
+ LockDate TIMESTAMP(3) NULL,
+ PRIMARY KEY (LockKey));
+
+
+CREATE TABLE STORMSETTINGS (
+ primaryKey UUID NOT NULL,
+ Module VARCHAR(1000) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ "User" VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMAdvLimit (
+ primaryKey UUID NOT NULL,
+ "User" VARCHAR(255) NULL,
+ Published BOOLEAN NULL,
+ Module VARCHAR(255) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ HotKeyData INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERSETTING (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMWEBSEARCH (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ "Order" INT NOT NULL,
+ PresentView VARCHAR(255) NOT NULL,
+ DetailedView VARCHAR(255) NOT NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERDETAIL (
+ primaryKey UUID NOT NULL,
+ Caption VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ ConnectMasterProp VARCHAR(255) NOT NULL,
+ OwnerConnectProp VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERLOOKUP (
+ primaryKey UUID NOT NULL,
+ DataObjectType VARCHAR(255) NOT NULL,
+ Container VARCHAR(255) NULL,
+ ContainerTag VARCHAR(255) NULL,
+ FieldsToView VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE UserSetting (
+ primaryKey UUID NOT NULL,
+ AppName VARCHAR(256) NULL,
+ UserName VARCHAR(512) NULL,
+ UserGuid UUID NULL,
+ ModuleName VARCHAR(1024) NULL,
+ ModuleGuid UUID NULL,
+ SettName VARCHAR(256) NULL,
+ SettGuid UUID NULL,
+ SettLastAccessTime TIMESTAMP(3) NULL,
+ StrVal VARCHAR(256) NULL,
+ TxtVal TEXT NULL,
+ IntVal INT NULL,
+ BoolVal BOOLEAN NULL,
+ GuidVal UUID NULL,
+ DecimalVal DECIMAL(20,10) NULL,
+ DateTimeVal TIMESTAMP(3) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ApplicationLog (
+ primaryKey UUID NOT NULL,
+ Category VARCHAR(64) NULL,
+ EventId INT NULL,
+ Priority INT NULL,
+ Severity VARCHAR(32) NULL,
+ Title VARCHAR(256) NULL,
+ Timestamp TIMESTAMP(3) NULL,
+ MachineName VARCHAR(32) NULL,
+ AppDomainName VARCHAR(512) NULL,
+ ProcessId VARCHAR(256) NULL,
+ ProcessName VARCHAR(512) NULL,
+ ThreadName VARCHAR(512) NULL,
+ Win32ThreadId VARCHAR(128) NULL,
+ Message VARCHAR(2500) NULL,
+ FormattedMessage TEXT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+
+ ALTER TABLE СоставНапитков ADD CONSTRAINT FK481abd7f3079f535b8278ff6368cf228a6c183f9 FOREIGN KEY (Продукты) REFERENCES Продукты; 
+CREATE INDEX Index481abd7f3079f535b8278ff6368cf228a6c183f9 on СоставНапитков (Продукты); 
+
+ ALTER TABLE СоставНапитков ADD CONSTRAINT FK68884191b855dc817689cc8c85793283c2dc36cc FOREIGN KEY (Напитки) REFERENCES Напитки; 
+CREATE INDEX Index68884191b855dc817689cc8c85793283c2dc36cc on СоставНапитков (Напитки); 
+
+ ALTER TABLE Запись ADD CONSTRAINT FKffb703d938ddf4970f65b26441ddddc1f15dad66 FOREIGN KEY (Гости) REFERENCES Гости; 
+CREATE INDEX Indexffb703d938ddf4970f65b26441ddddc1f15dad66 on Запись (Гости); 
+
+ ALTER TABLE Запись ADD CONSTRAINT FKc9f975a3c82dbcc3a019f2c2ff4c709e42cb35cf FOREIGN KEY (Бронь) REFERENCES Бронь; 
+CREATE INDEX Indexc9f975a3c82dbcc3a019f2c2ff4c709e42cb35cf on Запись (Бронь); 
+
+ ALTER TABLE Бронь ADD CONSTRAINT FKf893004d067e220f1ca3a47777f3e485545bfa63 FOREIGN KEY (Стол) REFERENCES Стол; 
+CREATE INDEX Indexf893004d067e220f1ca3a47777f3e485545bfa63 on Бронь (Стол); 
+
+ ALTER TABLE Бронь ADD CONSTRAINT FK3b3dee26d8eb83bd994533f13854f3eb027b7667 FOREIGN KEY (Сотрудники) REFERENCES Сотрудники; 
+CREATE INDEX Index3b3dee26d8eb83bd994533f13854f3eb027b7667 on Бронь (Сотрудники); 
+
+ ALTER TABLE Бронь ADD CONSTRAINT FK1e9a9af9be99fb84f429d50e6e7aa003000e16e9 FOREIGN KEY (Ресторан) REFERENCES Ресторан; 
+CREATE INDEX Index1e9a9af9be99fb84f429d50e6e7aa003000e16e9 on Бронь (Ресторан); 
+
+ ALTER TABLE ЗаказНапитков ADD CONSTRAINT FKe184ec8b8361ee9abdf5e3cbc6b53abf9b53c93e FOREIGN KEY (Напитки) REFERENCES Напитки; 
+CREATE INDEX Indexe184ec8b8361ee9abdf5e3cbc6b53abf9b53c93e on ЗаказНапитков (Напитки); 
+
+ ALTER TABLE ЗаказНапитков ADD CONSTRAINT FK147a7b0b02a28936a9065ab89528e8330ee2b71c FOREIGN KEY (Бронь) REFERENCES Бронь; 
+CREATE INDEX Index147a7b0b02a28936a9065ab89528e8330ee2b71c on ЗаказНапитков (Бронь); 
+
+ ALTER TABLE Сотрудники ADD CONSTRAINT FKdb12690da9c19a13f60fc28ce9dc5fcfae00ada9 FOREIGN KEY (Должность) REFERENCES Должность; 
+CREATE INDEX Indexdb12690da9c19a13f60fc28ce9dc5fcfae00ada9 on Сотрудники (Должность); 
+
+ ALTER TABLE ЗаказБлюда ADD CONSTRAINT FK1490298951253f100c5704535370c61ef646caa4 FOREIGN KEY (Блюда) REFERENCES Блюда; 
+CREATE INDEX Index1490298951253f100c5704535370c61ef646caa4 on ЗаказБлюда (Блюда); 
+
+ ALTER TABLE ЗаказБлюда ADD CONSTRAINT FKf19e74f30822673ee2f573326d4f41b2e317efc8 FOREIGN KEY (Бронь) REFERENCES Бронь; 
+CREATE INDEX Indexf19e74f30822673ee2f573326d4f41b2e317efc8 on ЗаказБлюда (Бронь); 
+
+ ALTER TABLE СоставБлюда ADD CONSTRAINT FKc68ae8d203222e982fcfbab53faa8d3ce525a478 FOREIGN KEY (Продукты) REFERENCES Продукты; 
+CREATE INDEX Indexc68ae8d203222e982fcfbab53faa8d3ce525a478 on СоставБлюда (Продукты); 
+
+ ALTER TABLE СоставБлюда ADD CONSTRAINT FK7a5c9fe95de846134b94cee34d087ca2ef97d512 FOREIGN KEY (Блюда) REFERENCES Блюда; 
+CREATE INDEX Index7a5c9fe95de846134b94cee34d087ca2ef97d512 on СоставБлюда (Блюда); 
+
+ ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERDETAIL ADD CONSTRAINT FK921d16269835017e2a0d0e29ad6fb175454a70d0 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERLOOKUP ADD CONSTRAINT FKce38ef0db3f01a53acaa49fed8853fb941ad47ba FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+

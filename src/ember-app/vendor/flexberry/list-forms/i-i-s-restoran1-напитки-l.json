@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran1-напитки-e",
+  "editForm": "i-i-s-restoran1-напитки-e",
+  "external": false,
+  "caption": "Напитки",
+  "name": "IISRestoran1НапиткиL",
+  "className": "НапиткиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran1-напитки",
+      "modelProjection": "НапиткиL"
+    }
+  ]
+}

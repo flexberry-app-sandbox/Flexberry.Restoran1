@@ -1,0 +1,111 @@
+﻿{
+  "applicationCaption": "Restoran1",
+  "applicationTitle": "Restoran1",
+  "items": [
+    {
+      "link": null,
+      "menuName": "бронь",
+      "caption": "Бронь",
+      "title": "Бронь",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-бронь-l",
+          "menuName": null,
+          "caption": "Бронь",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "стол",
+      "caption": "Стол",
+      "title": "Стол",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-стол-l",
+          "menuName": null,
+          "caption": "Стол",
+          "title": "Стол",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "сотрудники",
+      "caption": "Сотрудники",
+      "title": "Сотрудники",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "Сотрудники",
+          "children": null
+        },
+        {
+          "link": "i-i-s-restoran1-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "Должность",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "меню",
+      "caption": "Меню",
+      "title": "Меню",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-напитки-l",
+          "menuName": null,
+          "caption": "Напитки",
+          "title": "Напитки",
+          "children": null
+        },
+        {
+          "link": "i-i-s-restoran1-блюда-l",
+          "menuName": null,
+          "caption": "Блюда",
+          "title": "Блюда",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "ресторан",
+      "caption": "Ресторан",
+      "title": "Ресторан",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-ресторан-l",
+          "menuName": null,
+          "caption": "Ресторан",
+          "title": "Ресторан",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "продукты",
+      "caption": "Продукты",
+      "title": "Продукты",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-продукты-l",
+          "menuName": null,
+          "caption": "Продукты",
+          "title": "Продукты",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
