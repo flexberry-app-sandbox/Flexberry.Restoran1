@@ -173,6 +173,14 @@ $.extend(true, translations, {
             caption: 'Продукты',
             title: 'Продукты'
           }
+        },
+        гость: {
+          caption: 'Гость',
+          title: 'Гость',
+          'i-i-s-restoran1-гости-l': {
+            caption: 'Гости',
+            title: 'Гости'
+          }
         }
       }
     },

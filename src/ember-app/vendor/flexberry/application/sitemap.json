@@ -105,6 +105,21 @@
           "children": null
         }
       ]
+    },
+    {
+      "link": null,
+      "menuName": "гость",
+      "caption": "Гость",
+      "title": "Гость",
+      "children": [
+        {
+          "link": "i-i-s-restoran1-гости-l",
+          "menuName": null,
+          "caption": "Гости",
+          "title": "Гости",
+          "children": null
+        }
+      ]
     }
   ],
   "mobile": true

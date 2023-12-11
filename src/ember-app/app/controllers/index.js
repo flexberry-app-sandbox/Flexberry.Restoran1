@@ -22,7 +22,7 @@ export default Controller.extend({
             link: 'i-i-s-restoran1-бронь-l',
             caption: i18n.t('forms.application.sitemap.бронь.i-i-s-restoran1-бронь-l.caption'),
             title: i18n.t('forms.application.sitemap.бронь.i-i-s-restoran1-бронь-l.title'),
-            icon: 'suitcase',
+            icon: 'folder',
             children: null
           }]
         }, {
@@ -46,7 +46,7 @@ export default Controller.extend({
             link: 'i-i-s-restoran1-сотрудники-l',
             caption: i18n.t('forms.application.sitemap.сотрудники.i-i-s-restoran1-сотрудники-l.caption'),
             title: i18n.t('forms.application.sitemap.сотрудники.i-i-s-restoran1-сотрудники-l.title'),
-            icon: 'list',
+            icon: 'phone',
             children: null
           }, {
             link: 'i-i-s-restoran1-должность-l',
@@ -70,7 +70,7 @@ export default Controller.extend({
             link: 'i-i-s-restoran1-блюда-l',
             caption: i18n.t('forms.application.sitemap.меню.i-i-s-restoran1-блюда-l.caption'),
             title: i18n.t('forms.application.sitemap.меню.i-i-s-restoran1-блюда-l.title'),
-            icon: 'chart line',
+            icon: 'list',
             children: null
           }]
         }, {
@@ -82,7 +82,7 @@ export default Controller.extend({
             link: 'i-i-s-restoran1-ресторан-l',
             caption: i18n.t('forms.application.sitemap.ресторан.i-i-s-restoran1-ресторан-l.caption'),
             title: i18n.t('forms.application.sitemap.ресторан.i-i-s-restoran1-ресторан-l.title'),
-            icon: 'briefcase',
+            icon: 'calendar',
             children: null
           }]
         }, {
@@ -94,6 +94,19 @@ export default Controller.extend({
             link: 'i-i-s-restoran1-продукты-l',
             caption: i18n.t('forms.application.sitemap.продукты.i-i-s-restoran1-продукты-l.caption'),
             title: i18n.t('forms.application.sitemap.продукты.i-i-s-restoran1-продукты-l.title'),
+            icon: 'table',
+            children: null
+          }]
+        }, {
+          link: null,
+          icon: 'list',
+          caption: i18n.t('forms.application.sitemap.гость.caption'),
+          title: i18n.t('forms.application.sitemap.гость.title'),
+          children: [{
+            link: 'i-i-s-restoran1-гости-l',
+            caption: i18n.t('forms.application.sitemap.гость.i-i-s-restoran1-гости-l.caption'),
+            title: i18n.t('forms.application.sitemap.гость.i-i-s-restoran1-гости-l.title'),
+            icon: 'paperclip',
             children: null
           }]
         }
